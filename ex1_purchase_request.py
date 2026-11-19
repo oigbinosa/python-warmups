@@ -1,4 +1,5 @@
-from pydantic import BaseModel, field_validator, model_validator, ValidationError
+from pydantic import BaseModel, field_validator, model_validator, ValidationError, json
+import json
 
 
 class LineItem(BaseModel):
@@ -9,8 +10,8 @@ class LineItem(BaseModel):
     @field_validator("quantity")
     @classmethod
     def quantity_not_negative(c, value: int) -> int:
-        if value < 0:
-            raise ValueError("quantity cannot be negative")
+        if value <= 0:
+            raise ValueError("quantity cannot be less than or equal to zero")
         return value
 
 
@@ -23,9 +24,9 @@ class PurchaseRequest(BaseModel):
     @model_validator(mode="after")
     def total_matches_line_items(self) -> "PurchaseRequest":
         expected = sum(item.quantity * item.unit_price for item in self.lineItems)
-        if self.total != expected:
+        if abs(expected - self.total) > 0.01:
             raise ValueError(
-                "total {self.total} does not match line items sum {expected:.2f}"
+                f"total {self.total} does not match line items sum {expected:.2f}"
             )
         # self is the fully built object, so self.line_items and self.total are ready to use
         # compute the expected total from the line items
@@ -34,37 +35,13 @@ class PurchaseRequest(BaseModel):
 
 
 if __name__ == "__main__":
-    valid_request = PurchaseRequest(
-        id="PR-1001",
-        vendor="Northeast Safety Supply",
-        lineItems=[
-            LineItem(
-                description="Insulated work gloves", quantity=10, unit_price=12.50
-            ),
-            LineItem(description="Hard hat, Class E", quantity=4, unit_price=37.25),
-        ],
-        total=274.00,
-    )
-    print(valid_request.model_dump_json(indent=2))
+    # print(valid_request.model_dump_json(indent=2))
 
-    bad_cases = {
-        "negative quantity": dict(
-            id="PR-1002",
-            vendor="Acme",
-            lineItems=[dict(description="Gloves", quantity=-2, unit_price=12.50)],
-            total=-25.00,
-        ),
-        "wrong total": dict(
-            id="PR-1003",
-            vendor="Acme",
-            lineItems=[dict(description="Gloves", quantity=2, unit_price=12.50)],
-            total=30.00,
-        ),
-    }
+    with open("purchaseRequests.json") as file:
+        data = json.load(file)
 
-    for name, data in bad_cases.items():
+    for request in data:
         try:
-            PurchaseRequest(**data)
-            print(f"{name}: unexpectedly passed")
+            PurchaseRequest.model_validate(request)
         except ValidationError as e:
-            print(f"{name}: rejected\n{e}\n")
+            print(f"{request['id']}: rejected\n{e}\n")
