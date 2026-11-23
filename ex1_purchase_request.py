@@ -1,5 +1,4 @@
-from pydantic import BaseModel, field_validator, model_validator, ValidationError, json
-import json
+from pydantic import BaseModel, ValidationError, field_validator, json, model_validator
 
 
 class LineItem(BaseModel):
@@ -22,7 +21,7 @@ class PurchaseRequest(BaseModel):
     total: float
 
     @model_validator(mode="after")
-    def total_matches_line_items(self) -> "PurchaseRequest":
+    def total_matches_line_items(self) -> PurchaseRequest:
         expected = sum(item.quantity * item.unit_price for item in self.lineItems)
         if abs(expected - self.total) > 0.01:
             raise ValueError(

@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+
 from ex1_purchase_request import PurchaseRequest
 
 app = FastAPI(title="Purchase Requests API")

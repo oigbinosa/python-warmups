@@ -1,4 +1,7 @@
-import asyncio, httpx, time
+import asyncio
+import time
+
+import httpx
 
 
 async def fetch_report(client, url):
