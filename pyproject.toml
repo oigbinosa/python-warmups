@@ -9,8 +9,10 @@ authors = [
 requires-python = ">=3.14"
 dependencies = [
     "fastapi[standard]>=0.165.0",
+    "google-genai>=3.6.1",
     "httpx>=0.28.1",
     "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
 ]
 
 [project.scripts]

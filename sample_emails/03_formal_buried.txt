@@ -1,0 +1,45 @@
+From: Arthur Pendelton, Senior Account Director – GridCore Power Systems a.pendelton@example.com
+To: Procurement & Supply Chain Operations – Metro Energy & Gas Corp. procurement@example.com
+Cc: Quality Assurance qa@example.com; Heavy Haul Logistics dispatch@example.com
+Date: November 24, 2026
+Subject: NOTICE OF SCHEDULED DELIVERY, COMPLIANCE CERTIFICATION, AND INFRASTRUCTURE STAGING – PO #UT-884920 (2500 kVA Pad-Mounted Transformers)
+
+Dear Procurement and Grid Operations Team,
+Please accept this correspondence as formal notification regarding the manufacturing completion, quality assurance testing, and upcoming specialized freight dispatch for Purchase Order #UT-884920, executed under Master Supply Agreement #MSA-2024-09.
+
+1. Manufacturing & Compliance Verification
+
+We are pleased to confirm that all six (6) 2500 kVA Three-Phase Pad-Mounted Distribution Transformers (13.8kV – 480Y/277V) have successfully passed factory acceptance testing (FAT) at our facility in Pittsburgh, Pennsylvania.
+In accordance with your engineering specifications and regulatory requirements, each unit has been certified to meet or exceed the following standards:
+• IEEE C57.12.00 & C57.12.34: Standard general and specific requirements for pad-mounted, compartmental-type, self-cooled, three-phase distribution transformers.
+• DOE 10 CFR Part 431: Verified compliance with current Department of Energy efficiency standards.
+• Dielectric & Fluid Testing: Certified mineral oil insulating fluid verified free of Polychlorinated Biphenyls (PCBs < 1 ppm).
+Digital copies of the Certified Test Reports (CTRs), Material Safety Data Sheets (MSDS), and serialized warranty certificates are attached to this email and have been uploaded to your vendor compliance portal.
+
+2. Logistics & Delivery Schedule
+
+Due to the weight and dimensions of the equipment (approximately 11,400 lbs per unit), these assets are classified as oversized heavy haul freight and will be transported via specialized flatbed carriers equipped with air-ride suspension.
+• Carrier: Keystone Heavy Haul Logistics
+• Bill of Lading (BOL) Reference: KHH-904821-UT
+• Scheduled Dispatch Date: Monday, November 30, 2026, at 06:00 EST
+• Estimated Arrival at Receiving Yard: Wednesday, December 2, 2026, between 08:00 and 11:00 EST
+• Designated Delivery Location: Metro Energy Central Substation & Logistics Yard – Gate 4 (450 Industrial Parkway)
+
+3. Site Readiness & Offloading Requirements
+
+Per Section 8.4 of our Master Supply Agreement, offloading at the destination yard is the responsibility of Metro Energy & Gas Corp. Please ensure the following site conditions are met prior to the carrier's arrival to prevent detention fees:
+• A crane or heavy-duty forklift with a minimum lifting capacity of 15,000 lbs and spreader bars must be staged and ready at Gate 4.
+• Ground conditions must be level and accessible for a 53-foot step-deck trailer.
+• A designated receiving inspector must be present to sign the delivery manifest and note any exterior transit anomalies prior to offloading.
+
+4. Invoicing & Payment Terms
+
+Upon confirmed delivery and signature of the Bill of Lading, our accounting department will issue Invoice #INV-2026-4410 for the remaining 70% balance of $284,500.00, reflecting the 30% mobilization deposit already received. Per our agreed terms, payment will be due Net 45 from the date of delivery.
+Should there be any changes to your receiving yard's operating hours, site access protocols, or crane availability, please notify our logistics coordinator immediately at (412) 555-0194 so we may adjust dispatch accordingly.
+We appreciate Metro Energy & Gas Corp.’s continued partnership in supporting regional grid reliability and infrastructure modernization.
+Respectfully yours,
+Arthur Pendelton
+Senior Account Director, Utility & Infrastructure Division
+GridCore Power Systems Inc.
+Direct: (412) 555-0148 | Mobile: (412) 555-0199
+example.com
